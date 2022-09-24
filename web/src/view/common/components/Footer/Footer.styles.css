@@ -1,0 +1,7 @@
+.Footer {
+  border-top-left-radius: var(--page-element-border-radius);
+  border-top-right-radius: var(--page-element-border-radius);
+  box-shadow: var(--page-element-box-shadow);
+
+  background: var(--white);
+}

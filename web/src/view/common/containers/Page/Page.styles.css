@@ -1,0 +1,49 @@
+/*
+  Page
+*/
+
+.Page {
+  min-height: 100%;
+  display:flex;
+  flex-direction:column;
+}
+
+@media screen and (min-width: 920px) {
+  .Page {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .Page {
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+
+@media screen and (max-width: 420px) {
+  .Page {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Page {
+    --page-element-border-radius: 0px;
+  }
+}
+
+
+.Page_Item {
+  margin-bottom: 20px;
+}
+
+.Page_Footer {
+  margin-top: auto;
+}

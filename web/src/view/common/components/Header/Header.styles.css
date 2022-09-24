@@ -1,0 +1,7 @@
+.Header {
+  border-bottom-left-radius: var(--page-element-border-radius);
+  border-bottom-right-radius: var(--page-element-border-radius);
+  box-shadow: var(--page-element-box-shadow);
+
+  background: var(--white);
+}
