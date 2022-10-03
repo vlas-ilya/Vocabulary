@@ -6,7 +6,7 @@ type HomeState = {};
 export class Home extends Component<{}, HomeState> {
   render() {
     return <Content className="Home">
-      .!..
+      Test
     </Content>;
   }
 }

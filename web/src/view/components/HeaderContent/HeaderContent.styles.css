@@ -1,3 +1,225 @@
+/*               */
+/* HeaderContent */
+/*               */
+
 .HeaderContent {
-  padding: 10px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/*                     */
+/* HeaderContent_Icon */
+/*                     */
+
+.HeaderContent_Icon {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 100%;
+  border: 1px solid var(--color3);
+  background: var(--color4);
+  cursor: pointer;
+}
+
+.HeaderContent_Icon:focus-visible {
+  outline: 1px solid var(--color1);
+  border: 1px solid var(--color1);
+}
+
+/*                      */
+/* HeaderContent_Title */
+/*                      */
+.HeaderContent_Title {
+  float: left;
+  height: 100%;
+  padding: 25px 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 640px) {
+  .HeaderContent_Title {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .HeaderContent_Title {
+    display: block;
+  }
+}
+
+/*                       */
+/* HeaderContent_Content */
+/*                       */
+
+.HeaderContent_Content {
+  float: left;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media screen and (min-width: 640px) {
+  .HeaderContent_Content {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .HeaderContent_Content {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .HeaderContent_Content_active {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .HeaderContent_Content_active .HeaderContent_Item {
+    padding: 25px 10px;
+  }
+}
+
+/*                    */
+/* HeaderContent_Item */
+/*                    */
+
+.HeaderContent_Item {
+  height: 100%;
+  padding: 25px 20px;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+/*                    */
+/* HeaderContent_Link */
+/*                    */
+
+.HeaderContent_Link {
+  color: var(--black);
+  text-decoration: none;
+  position: relative;
+}
+
+.HeaderContent_Link:after {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 10px;
+  border-bottom: 1px solid var(--black);
+  opacity: 0.3;
+}
+
+.HeaderContent_Link:hover:after,
+.HeaderContent_Link:active:after,
+.HeaderContent_Link:focus:after {
+  content: none;
+}
+
+.HeaderContent_Link:focus-visible {
+  outline: none;
+}
+
+.HeaderContent_Link:focus-visible:after {
+  content: ' ';
+  position: absolute;
+  left: -7px;
+  top: -5px;
+  padding: 4px 6px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--black);
+  opacity: 0.3;
+}
+
+/*                      */
+/* HeaderContent_Burger */
+/*                      */
+
+.HeaderContent_Burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.HeaderContent_Burger:focus-visible {
+  outline: none;
+  border: 2px solid var(--color1);
+  border-radius: 10px;
+}
+
+.HeaderContent_Burger svg {
+  width: 30px;
+  height: 30px;
+}
+
+.HeaderContent_Burger svg path {
+  fill: var(--color1);
+}
+
+.HeaderContent_Burger:hover svg path {
+  fill: var(--color1_light);
+}
+
+.HeaderContent_Burger_active svg path {
+  fill: var(--color2);
+}
+
+.HeaderContent_Burger_active:hover svg path {
+  fill: var(--color2_light);
+}
+
+@media screen and (min-width: 640px) {
+  .HeaderContent_Burger {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .HeaderContent_Burger {
+    display: flex;
+  }
+}
+
+/*                       */
+/* HeaderContent_Account */
+/*                       */
+
+.HeaderContent_Account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  padding-bottom: 1px;
+
+  border-radius: 100%;
+  border: 1px solid var(--color3);
+
+  background: var(--color4);
+  cursor: pointer;
+
+  font-family: var(--additional-font);
+  font-weight: 700;
+  font-size: 25px;
+  color: var(--color1);
+}
+
+.HeaderContent_Account:focus-visible {
+  outline: 1px solid var(--color1);
+  border: 1px solid var(--color1);
 }
