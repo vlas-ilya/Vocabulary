@@ -2,10 +2,11 @@ import './HeaderContent.styles.css';
 import { KeyboardEventHandler, useCallback, useState } from 'react';
 import cm from 'classnames';
 import { ReactComponent as Menu } from '../../icons/menu.svg';
-import {Link} from "react-router-dom";
+import {Link, useLocation} from 'react-router-dom';
 
 export const HeaderContent = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = useCallback(() => setShowMenu(!showMenu), [showMenu, setShowMenu]);
 
@@ -38,22 +39,50 @@ export const HeaderContent = () => {
         })}
       >
         <div className="HeaderContent_Item">
-          <Link to="/words" className="HeaderContent_Link" tabIndex={1}>
+          <Link
+            to="/words"
+            className={cm('HeaderContent_Link', {
+              HeaderContent_Link_active: location.pathname.startsWith('/words'),
+            })}
+            tabIndex={1}
+            data-text="Words"
+          >
             Words
           </Link>
         </div>
         <div className="HeaderContent_Item">
-          <Link to="/teacher/students" className="HeaderContent_Link" tabIndex={1}>
+          <Link
+            to="/teacher/students"
+            className={cm('HeaderContent_Link', {
+              HeaderContent_Link_active: location.pathname.startsWith('/teacher/students'),
+            })}
+            tabIndex={1}
+            data-text="Students"
+          >
             Students
           </Link>
         </div>
         <div className="HeaderContent_Item">
-          <Link to="/lessons" className="HeaderContent_Link" tabIndex={1}>
+          <Link
+            to="/lessons"
+            className={cm('HeaderContent_Link', {
+              HeaderContent_Link_active: location.pathname.startsWith('/lessons'),
+            })}
+            tabIndex={1}
+            data-text="Lessons"
+          >
             Lessons
           </Link>
         </div>
         <div className="HeaderContent_Item">
-          <Link to="/trainings" className="HeaderContent_Link" tabIndex={1}>
+          <Link
+            to="/trainings"
+            className={cm('HeaderContent_Link', {
+              HeaderContent_Link_active: location.pathname.startsWith('/trainings'),
+            })}
+            tabIndex={1}
+            data-text="Trainings"
+          >
             Trainings
           </Link>
         </div>

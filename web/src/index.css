@@ -4,11 +4,13 @@
 :root {
   --color1: #555b6e;
   --color1_light: #696f80;
+  --color1_dark: #414654;
   --color2: #89b0ae;
   --color2_light: #a8c8c7;
   --color3: #bee3db;
   --color4: #faf9f9;
   --color5: #ffd6ba;
+  --color6: #8B3668;
   --black: #000000;
   --white: #ffffff;
 
