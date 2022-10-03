@@ -2,6 +2,7 @@ import './HeaderContent.styles.css';
 import { KeyboardEventHandler, useCallback, useState } from 'react';
 import cm from 'classnames';
 import { ReactComponent as Menu } from '../../icons/menu.svg';
+import {Link} from "react-router-dom";
 
 export const HeaderContent = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -15,11 +16,11 @@ export const HeaderContent = () => {
 
   return (
     <div className="HeaderContent">
-      <div className="HeaderContent_Icon" tabIndex={1} />
+      <Link to="/" className="HeaderContent_Icon" tabIndex={1} />
       <div className="HeaderContent_Title">Vocabulary</div>
-      <div className="HeaderContent_Account" tabIndex={2}>
+      <Link to="/student" className="HeaderContent_Account" tabIndex={2}>
         IV
-      </div>
+      </Link>
       <div
         className={cm('HeaderContent_Burger', {
           HeaderContent_Burger_active: showMenu,
@@ -37,24 +38,24 @@ export const HeaderContent = () => {
         })}
       >
         <div className="HeaderContent_Item">
-          <a href="#" className="HeaderContent_Link" tabIndex={1}>
+          <Link to="/words" className="HeaderContent_Link" tabIndex={1}>
             Words
-          </a>
+          </Link>
         </div>
         <div className="HeaderContent_Item">
-          <a href="#" className="HeaderContent_Link" tabIndex={1}>
+          <Link to="/teacher/students" className="HeaderContent_Link" tabIndex={1}>
             Students
-          </a>
+          </Link>
         </div>
         <div className="HeaderContent_Item">
-          <a href="#" className="HeaderContent_Link" tabIndex={1}>
+          <Link to="/lessons" className="HeaderContent_Link" tabIndex={1}>
             Lessons
-          </a>
+          </Link>
         </div>
         <div className="HeaderContent_Item">
-          <a href="#" className="HeaderContent_Link" tabIndex={1}>
+          <Link to="/trainings" className="HeaderContent_Link" tabIndex={1}>
             Trainings
-          </a>
+          </Link>
         </div>
       </div>
     </div>
